@@ -149,7 +149,7 @@
       먼저 본인 운영체제를 고르세요.</p>
   </header>
 
-  <div class="note">⚠️ <b>준비물</b> — Claude Code는 <b>Claude 유료 플랜</b>(Pro 이상), Codex 앱은 <b>ChatGPT 유료 플랜</b>(Plus 이상)이 필요해요.
+  <div class="note">⚠️ <b>준비물</b> — Claude Code는 <b>Anthropic API 크레딧</b>(또는 Claude 유료 구독), Codex 앱은 <b>ChatGPT 유료 플랜</b>(Plus 이상)이 필요해요.
     각 명령은 오른쪽 <b>복사</b> 버튼으로 그대로 복사할 수 있어요.</div>
 
   <div class="tabs">
@@ -201,12 +201,30 @@
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">zsh — 터미널</span><button class="copy">복사</button></div>
             <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">curl -fsSL https://claude.ai/install.sh | bash</span></span></div>
           </div>
-          <div class="ok">새 터미널을 열고 <code>claude</code> 를 입력하면 브라우저 로그인 창이 떠요.</div>
+          <div class="ok">설치 완료 — <b>인증은 다음 단계</b>(API 키)에서 합니다. 이미 Claude 유료 구독이 있으면 <code>claude</code> 실행 → 브라우저 로그인으로 대체할 수 있어요.</div>
         </div>
       </div>
 
       <div class="step">
         <div class="step__n">4</div>
+        <div>
+          <h3 class="step__title">API 키 등록 <span class="tag">ANTHROPIC_API_KEY</span></h3>
+          <p class="step__desc">Claude Code가 <b>API 크레딧</b>으로 동작하도록, 키를 발급받아 환경변수로 등록해요.</p>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">🔑</span><span class="dl__t">Anthropic <b>Console</b>에서 키를 발급받으세요. 키는 <code>sk-ant-api03-…</code> 로 시작해요 — <b>비밀번호처럼 취급</b>.</span></div>
+            <a class="link" href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">↗ console.anthropic.com — API Keys → Create Key</a>
+          </div>
+          <p class="step__desc" style="margin-top:16px;">발급한 키를 환경변수로 등록 (zsh):</p>
+          <div class="term">
+            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">zsh — 환경변수 등록</span><button class="copy">복사</button></div>
+            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">echo 'export ANTHROPIC_API_KEY="sk-ant-api03-여기에-발급키"' &gt;&gt; ~/.zshrc</span></span><span class="line"><span class="p">$ </span><span class="cmd">source ~/.zshrc</span></span></div>
+          </div>
+          <div class="ok"><code>echo $ANTHROPIC_API_KEY</code> 로 키가 보이면 등록 완료. 이후 <code>claude</code> 실행 시 “이 API 키를 쓸까요?”에 <b>승인</b>하고, <code>/status</code> 로 인증 방식을 확인하세요.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step__n">5</div>
         <div>
           <h3 class="step__title">Codex <span class="tag">앱</span></h3>
           <div class="dl">
@@ -222,7 +240,7 @@
     <div class="group">
       <div class="group__label">설치 확인</div>
       <div class="step">
-        <div class="step__n">5</div>
+        <div class="step__n">6</div>
         <div>
           <h3 class="step__title">제대로 깔렸는지 확인</h3>
           <div class="term">
@@ -238,7 +256,7 @@
       <div class="group__label">플러그인</div>
 
       <div class="step">
-        <div class="step__n">6</div>
+        <div class="step__n">7</div>
         <div>
           <h3 class="step__title">Superpowers</h3>
           <div class="agent">Claude Code</div>
@@ -254,7 +272,7 @@
       </div>
 
       <div class="step">
-        <div class="step__n">7</div>
+        <div class="step__n">8</div>
         <div>
           <h3 class="step__title">gstack</h3>
           <div class="agent">Claude Code</div>
@@ -283,7 +301,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
     <div class="group">
       <div class="group__label">관찰</div>
       <div class="step">
-        <div class="step__n">8</div>
+        <div class="step__n">9</div>
         <div>
           <h3 class="step__title">lazyagent</h3>
           <p class="step__desc">에이전트들이 무슨 일을 하는지 <b>트리로 보여주는</b> 관찰 도구예요.</p>
@@ -317,12 +335,30 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Windows PowerShell (관리자)</span><button class="copy">복사</button></div>
             <div class="term__body"><span class="line"><span class="p">PS&gt; </span><span class="cmd">irm https://claude.ai/install.ps1 | iex</span></span></div>
           </div>
-          <div class="ok">새 터미널에서 <code>claude</code> 입력 → 브라우저 로그인.</div>
+          <div class="ok">설치 완료 — <b>인증은 다음 단계</b>(API 키)에서. 구독이 있으면 <code>claude</code> → 브라우저 로그인으로 대체 가능.</div>
         </div>
       </div>
 
       <div class="step">
         <div class="step__n">2</div>
+        <div>
+          <h3 class="step__title">API 키 등록 <span class="tag">ANTHROPIC_API_KEY</span></h3>
+          <p class="step__desc">Claude Code가 <b>API 크레딧</b>으로 동작하도록, 키를 발급받아 환경변수로 등록해요.</p>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">🔑</span><span class="dl__t">Anthropic <b>Console</b>에서 키를 발급받으세요. 키는 <code>sk-ant-api03-…</code> 로 시작 — <b>비밀번호처럼 취급</b>.</span></div>
+            <a class="link" href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">↗ console.anthropic.com — API Keys → Create Key</a>
+          </div>
+          <p class="step__desc" style="margin-top:16px;">PowerShell에서 환경변수로 영구 등록:</p>
+          <div class="term">
+            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Windows PowerShell — 환경변수 등록</span><button class="copy">복사</button></div>
+            <div class="term__body"><span class="line"><span class="p">PS&gt; </span><span class="cmd">setx ANTHROPIC_API_KEY "sk-ant-api03-여기에-발급키"</span></span></div>
+          </div>
+          <div class="ok"><b>새 PowerShell 창</b>을 열고 <code>echo $env:ANTHROPIC_API_KEY</code> 로 확인. <code>claude</code> 실행 시 “이 API 키를 쓸까요?”에 <b>승인</b>하고, <code>/status</code> 로 확인하세요.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step__n">3</div>
         <div>
           <h3 class="step__title">Codex <span class="tag">앱</span></h3>
           <div class="dl">
@@ -339,7 +375,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       <div class="group__label">기본 도구</div>
 
       <div class="step">
-        <div class="step__n">3</div>
+        <div class="step__n">4</div>
         <div>
           <h3 class="step__title">Git · Node</h3>
           <p class="step__desc">PowerShell(관리자)에서 그대로 이어서 실행해요.</p>
@@ -351,7 +387,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       </div>
 
       <div class="step">
-        <div class="step__n">4</div>
+        <div class="step__n">5</div>
         <div>
           <h3 class="step__title">WSL</h3>
           <p class="step__desc">리눅스 환경이에요. gstack 실행에 필요해요.</p>
@@ -364,7 +400,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       </div>
 
       <div class="step">
-        <div class="step__n">5</div>
+        <div class="step__n">6</div>
         <div>
           <h3 class="step__title">Bun</h3>
           <p class="step__desc">여기서부턴 PowerShell이 아니라 <b>Git Bash 또는 WSL</b> 터미널에서 실행해요.</p>
@@ -380,7 +416,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
     <div class="group">
       <div class="group__label">설치 확인</div>
       <div class="step">
-        <div class="step__n">6</div>
+        <div class="step__n">7</div>
         <div>
           <h3 class="step__title">제대로 깔렸는지 확인</h3>
           <div class="term">
@@ -396,7 +432,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       <div class="group__label">플러그인</div>
 
       <div class="step">
-        <div class="step__n">7</div>
+        <div class="step__n">8</div>
         <div>
           <h3 class="step__title">Superpowers</h3>
           <div class="agent">Claude Code</div>
@@ -412,7 +448,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       </div>
 
       <div class="step">
-        <div class="step__n">8</div>
+        <div class="step__n">9</div>
         <div>
           <h3 class="step__title">gstack</h3>
           <p class="step__desc">⚠️ gstack 셋업은 <b>Git Bash 또는 WSL</b>에서 실행하세요 (PowerShell ✕). <code>bun</code>·<code>node</code> 가 PATH에 있어야 해요.</p>
@@ -441,7 +477,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
     <div class="group">
       <div class="group__label">관찰</div>
       <div class="step">
-        <div class="step__n">9</div>
+        <div class="step__n">10</div>
         <div>
           <h3 class="step__title">lazyagent</h3>
           <p class="step__desc">에이전트들이 무슨 일을 하는지 <b>트리로 보여주는</b> 관찰 도구예요. <b>Git Bash 또는 WSL</b>에서 실행해요.</p>

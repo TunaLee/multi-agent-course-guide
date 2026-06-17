@@ -234,7 +234,12 @@ Use /browse from gstack for all web browsing.
 Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
 /review, /qa, /ship, /autoplan, /cso, /retro, /investigate, /learn</div>
           </div>
-          <div class="ok"><code>claude</code> 를 재시작하고 <code>/office-hours</code> 가 보이면 성공.</div>
+          <p style="font-size:12.5px; color:var(--muted); margin:8px 0 2px;">↑ CLAUDE.md 섹션은 <code>/browse</code> 우선 사용을 알려주는 <b>힌트</b>일 뿐 — 스킬을 실제로 등록하는 건 위 <code>./setup</code>이에요.</p>
+          <div class="ok"><code>claude</code> 를 <b>완전히 재시작</b>한 뒤 <code>/skills</code> 로 확인하세요. 스킬은 세션 시작 때 로딩돼요.</div>
+          <div style="margin-top:12px; padding:13px 15px; border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:8px; background:rgba(0,0,0,.12);">
+            <div style="font-weight:700; font-size:14px; margin-bottom:8px;">⚠ 메뉴에 <code>/gstack</code>만 뜨고 개별 스킬이 안 보일 때</div>
+            <p style="font-size:13px; line-height:1.75; margin:0;">정상일 수 있어요 — gstack은 <b>자연어로도 작동</b>합니다: <b>"office hours 실행"</b> · <b>"qa 해줘"</b> · <b>"보안 점검"</b>. 깔끔히 잡고 싶으면 ① Claude Code를 <b>gstack 설치한 그 환경</b>(WSL이면 WSL 홈)에서 실행 · ② <code>ls -la ~/.claude/skills/</code> 확인 · ③ <code>~/.claude/skills/gstack/setup --no-prefix</code> 재실행 후 재시작. <code>./setup</code>이 <b>Playwright(브라우저)</b>에서 멈춰도 <code>/browse</code>만 영향이고 나머지 스킬은 정상이에요.</p>
+          </div>
           <div class="agent codex">Codex</div>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">zsh — 터미널</span><button class="copy">복사</button></div>
@@ -426,7 +431,12 @@ Use /browse from gstack for all web browsing.
 Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
 /review, /qa, /ship, /autoplan, /cso, /retro, /investigate, /learn</div>
           </div>
-          <div class="ok"><code>claude</code> 재시작 후 <code>/office-hours</code> 가 보이면 성공.</div>
+          <p style="font-size:12.5px; color:var(--muted); margin:8px 0 2px;">↑ CLAUDE.md 섹션은 <code>/browse</code> 우선 사용을 알려주는 <b>힌트</b>일 뿐 — 스킬을 실제로 등록하는 건 위 <code>./setup</code>이에요.</p>
+          <div class="ok"><code>claude</code> 를 <b>완전히 재시작</b>한 뒤 <code>/skills</code> 로 확인하세요. 스킬은 세션 시작 때 로딩돼요.</div>
+          <div style="margin-top:12px; padding:13px 15px; border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:8px; background:rgba(0,0,0,.12);">
+            <div style="font-weight:700; font-size:14px; margin-bottom:8px;">⚠ 메뉴에 <code>/gstack</code>만 뜨고 개별 스킬이 안 보일 때</div>
+            <p style="font-size:13px; line-height:1.75; margin:0;">정상일 수 있어요 — gstack은 <b>자연어로도 작동</b>합니다: <b>"office hours 실행"</b> · <b>"qa 해줘"</b> · <b>"보안 점검"</b>. 깔끔히 잡고 싶으면 ① Claude Code를 <b>gstack 설치한 그 환경</b>(WSL이면 WSL 홈)에서 실행 · ② <code>ls -la ~/.claude/skills/</code> 확인 · ③ <code>~/.claude/skills/gstack/setup --no-prefix</code> 재실행 후 재시작. <code>./setup</code>이 <b>Playwright(브라우저)</b>에서 멈춰도 <code>/browse</code>만 영향이고 나머지 스킬은 정상이에요.</p>
+          </div>
           <div class="agent codex">Codex</div>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Git Bash / WSL</span><button class="copy">복사</button></div>

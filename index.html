@@ -271,17 +271,31 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
   <section class="os" id="win">
 
     <div class="group">
-      <div class="group__label">에이전트</div>
+      <div class="group__label">기본 도구</div>
 
       <div class="step">
         <div class="step__n">1</div>
         <div>
+          <h3 class="step__title">Git · Node</h3>
+          <p class="step__desc">PowerShell(관리자)에서 그대로 이어서 실행해요.</p>
+          <div class="term">
+            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Windows PowerShell (관리자)</span><button class="copy">복사</button></div>
+            <div class="term__body"><span class="line"><span class="p">PS&gt; </span><span class="cmd">winget install Git.Git</span></span><span class="line"><span class="p">PS&gt; </span><span class="cmd">winget install OpenJS.NodeJS.LTS</span></span></div>
+          </div>
+        </div>
+      </div>
+
+      </div><div class="group">
+      <div class="group__label">에이전트</div>
+
+      <div class="step">
+        <div class="step__n">2</div>
+        <div>
           <h3 class="step__title">Claude Code <span class="tag">CLI</span></h3>
-          <p class="step__desc">회사 PC에선 PowerShell 설치 스크립트가 정책에 막히는 경우가 있어, <b>Node.js → npm</b> 방식으로 설치해요.</p>
-          <p class="step__desc" style="margin-top:6px;">① <a class="link" href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a> 에서 <b>LTS</b> 설치 프로그램(.msi)으로 설치. ② PowerShell 또는 명령 프롬프트에서:</p>
+          <p class="step__desc">앞 단계(Git·Node)에서 깐 <b>npm</b>으로 설치해요. PowerShell 또는 명령 프롬프트에서:</p>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Windows PowerShell / cmd</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">&gt; </span><span class="cmd">node -v</span></span><span class="line"><span class="p">&gt; </span><span class="cmd">npm install -g @anthropic-ai/claude-code</span></span></div>
+            <div class="term__body"><span class="line"><span class="p">&gt; </span><span class="cmd">npm install -g @anthropic-ai/claude-code</span></span></div>
           </div>
           <div class="ok"><code>claude --version</code> 로 설치 확인. 인증은 <b>다음 단계(API 키)</b>에서. 구독이 있으면 <code>claude</code> 입력 → 브라우저 로그인으로 대체돼요.</div>
           <div style="margin-top:14px; padding:13px 15px; border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:8px; background:rgba(0,0,0,.12);">
@@ -299,7 +313,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       </div>
 
       <div class="step">
-        <div class="step__n">2</div>
+        <div class="step__n">3</div>
         <div>
           <h3 class="step__title">API 키 등록 <span class="tag">ANTHROPIC_API_KEY</span></h3>
           <p class="step__desc">Claude Code가 <b>API 크레딧</b>으로 동작하도록, 제공된 키를 환경변수로 등록해요.</p>
@@ -318,7 +332,7 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
       </div>
 
       <div class="step">
-        <div class="step__n">3</div>
+        <div class="step__n">4</div>
         <div>
           <h3 class="step__title">Codex <span class="tag">앱</span></h3>
           <div class="dl">
@@ -332,38 +346,26 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
     </div>
 
     <div class="group">
-      <div class="group__label">기본 도구</div>
-
-      <div class="step">
-        <div class="step__n">4</div>
-        <div>
-          <h3 class="step__title">Git · Node</h3>
-          <p class="step__desc">PowerShell(관리자)에서 그대로 이어서 실행해요.</p>
-          <div class="term">
-            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Windows PowerShell (관리자)</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">PS&gt; </span><span class="cmd">winget install Git.Git</span></span><span class="line"><span class="p">PS&gt; </span><span class="cmd">winget install OpenJS.NodeJS.LTS</span></span></div>
-          </div>
-        </div>
-      </div>
+      <div class="group__label">선택 도구 (생략 가능)</div>
 
       <div class="step">
         <div class="step__n">5</div>
         <div>
-          <h3 class="step__title">WSL</h3>
-          <p class="step__desc">리눅스 환경이에요. gstack 실행에 필요해요.</p>
+          <h3 class="step__title">WSL <span class="tag">선택</span></h3>
+          <p class="step__desc">리눅스 환경. <b>네이티브 Windows(Git Bash)면 생략 가능</b> — gstack을 WSL에서 돌릴 때만 필요.</p>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Windows PowerShell (관리자)</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">PS&gt; </span><span class="cmd">wsl --install</span></span></div>
+            <div class="term__body"><span class="line"><span class="p">PS&gt; </span><span class="cmd">wsl --install -d Ubuntu-24.04</span></span></div>
           </div>
-          <div class="ok">끝나면 <b>컴퓨터를 재시작</b>하세요.</div>
+          <div class="ok">끝나면 <b>컴퓨터를 재시작</b>하세요. <b>24.04로 고정</b>한 건 최신 26.04가 일부 도구(Playwright·<code>/browse</code>)와 아직 호환이 안 되기 때문이에요.</div>
         </div>
       </div>
 
       <div class="step">
         <div class="step__n">6</div>
         <div>
-          <h3 class="step__title">Bun</h3>
-          <p class="step__desc">여기서부턴 PowerShell이 아니라 <b>Git Bash 또는 WSL</b> 터미널에서 실행해요.</p>
+          <h3 class="step__title">Bun <span class="tag">선택</span></h3>
+          <p class="step__desc"><b>gstack <code>/browse</code> 전용 — 핵심 실습엔 불필요.</b> 쓸 거면 Git Bash 또는 WSL에서. (WSL은 <code>sudo apt install -y unzip</code> 먼저 · 안 보이면 <code>source ~/.bashrc</code>)</p>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Git Bash / WSL</span><button class="copy">복사</button></div>
             <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">curl -fsSL https://bun.sh/install | bash</span></span><span class="line"><span class="p">$ </span><span class="cmd">exec $SHELL</span></span></div>

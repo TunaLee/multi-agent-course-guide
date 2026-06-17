@@ -452,14 +452,14 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
         <div class="step__n">10</div>
         <div>
           <h3 class="step__title">lazyagent</h3>
-          <p class="step__desc">에이전트들이 무슨 일을 하는지 <b>트리로 보여주는</b> 관찰 도구예요. <b>Git Bash 또는 WSL</b>에서 실행해요.</p>
+          <p class="step__desc">에이전트들이 무슨 일을 하는지 <b>트리로 보여주는</b> 관찰 도구예요. <b>Git Bash 또는 WSL</b>에서 실행해요. 설치는 <code>~/.local/bin</code>에 되는데 PATH에 없으면 <code>lazyagent: command not found</code>가 나요 — 아래 <b>첫 두 줄</b>로 PATH에 추가하면 해결돼요.</p>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Git Bash / WSL — 설치</span><button class="copy">복사</button></div>
             <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">curl -fsSL https://raw.githubusercontent.com/chojs23/lazyagent/main/scripts/install.sh | sh</span></span></div>
           </div>
           <div class="term">
             <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Git Bash / WSL — 훅 등록 · 실행</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init claude</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init codex</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent</span></span></div>
+            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.bashrc</span></span><span class="line"><span class="p">$ </span><span class="cmd">source ~/.bashrc</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init claude</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init codex</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent</span></span></div>
           </div>
           <div class="ok"><code>lazyagent</code> 실행 후 <b>패널 3 (Agents/subagents)</b> 에서 서브에이전트 트리를 볼 수 있어요.</div>
         </div>

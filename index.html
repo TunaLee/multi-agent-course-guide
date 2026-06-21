@@ -229,24 +229,45 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
     </div>
 
     <div class="group">
-      <div class="group__label">관찰</div>
+      <div class="group__label">연동·배포 준비</div>
       <div class="step">
         <div class="step__n">7</div>
         <div>
-          <h3 class="step__title">lazyagent</h3>
-          <p class="step__desc">에이전트들이 무슨 일을 하는지 <b>트리로 보여주는</b> 관찰 도구예요.</p>
-          <div class="term">
-            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">zsh — 설치</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">brew tap chojs23/homebrew-tap</span></span><span class="line"><span class="p">$ </span><span class="cmd">brew install --cask lazyagent</span></span></div>
+          <h3 class="step__title">Slack <span class="tag">웹</span> <span class="tag">워크스페이스</span></h3>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">▤</span><span class="dl__t">슬랙 연동 실습에 쓸 <b>워크스페이스</b>예요. 무료로 새로 만들면 됩니다 — 앱·봇 토큰은 워크숍 중에 같이 만들어요.</span></div>
+            <a class="link" href="https://slack.com/get-started" target="_blank" rel="noopener">↗ slack.com — 워크스페이스 만들기</a>
+            <ol><li>새 워크스페이스 생성(이메일 인증)</li><li>테스트용 채널 하나(예: <code>#dev</code>) 만들기</li></ol>
           </div>
-          <div class="term">
-            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">zsh — 훅 등록 · 실행</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init claude</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init codex</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent</span></span></div>
-          </div>
-          <div class="ok"><code>lazyagent</code> 실행 후 <b>패널 3 (Agents/subagents)</b> 에서 서브에이전트 트리를 볼 수 있어요.</div>
+          <div class="ok">워크스페이스 + 채널까지만. 앱 생성·봇 토큰·슬래시 명령은 워크숍에서 함께.</div>
         </div>
       </div>
-    </div></div>
+      <div class="step">
+        <div class="step__n">8</div>
+        <div>
+          <h3 class="step__title">v0 <span class="tag">웹</span> <span class="tag">가입만</span></h3>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">▦</span><span class="dl__t">Vercel의 디자인·배포 도구예요. <b>가입만</b> 해두면 됩니다 — v0 계정이 곧 Vercel 계정이에요.</span></div>
+            <a class="link" href="https://v0.app" target="_blank" rel="noopener">↗ v0.app — Sign up</a>
+            <ol><li>GitHub로 로그인(권장) → GitHub 연결 허용</li><li>나중에 만든 레포를 v0로 Import → 디자인하고 Vercel로 배포</li></ol>
+          </div>
+          <div class="ok">로그인 + GitHub 연결까지만 해두세요.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__n">9</div>
+        <div>
+          <h3 class="step__title">Neon <span class="tag">웹</span> <span class="tag">DB 생성</span></h3>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">◇</span><span class="dl__t">배포 때 쓸 <b>호스팅 Postgres</b>예요(무료 티어). SQLite는 서버리스에서 안 떠서 필요해요.</span></div>
+            <a class="link" href="https://neon.tech" target="_blank" rel="noopener">↗ neon.tech — Sign up</a>
+            <ol><li>GitHub/Google로 가입 → New Project 생성(region 선택)</li><li>Connection string(<code>postgresql://…</code>) 복사 → 배포 때 <code>DATABASE_URL</code>로</li></ol>
+          </div>
+          <div class="ok">연결 문자열만 메모해 두면 됩니다.</div>
+        </div>
+      </div>
+    </div>
+    </div>
         <div class="osblock win"><div class="group">
       <div class="group__label">기본 도구</div>
 
@@ -396,24 +417,45 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review,
     </div>
 
     <div class="group">
-      <div class="group__label">관찰</div>
+      <div class="group__label">연동·배포 준비</div>
       <div class="step">
         <div class="step__n">8</div>
         <div>
-          <h3 class="step__title">lazyagent</h3>
-          <p class="step__desc">에이전트들이 무슨 일을 하는지 <b>트리로 보여주는</b> 관찰 도구예요. <b>Git Bash 또는 WSL</b>에서 실행해요. 설치는 <code>~/.local/bin</code>에 되는데 PATH에 없으면 <code>lazyagent: command not found</code>가 나요 — 아래 <b>첫 두 줄</b>로 PATH에 추가하면 해결돼요.</p>
-          <div class="term">
-            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Git Bash / WSL — 설치</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">curl -fsSL https://raw.githubusercontent.com/chojs23/lazyagent/main/scripts/install.sh | sh</span></span></div>
+          <h3 class="step__title">Slack <span class="tag">웹</span> <span class="tag">워크스페이스</span></h3>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">▤</span><span class="dl__t">슬랙 연동 실습에 쓸 <b>워크스페이스</b>예요. 무료로 새로 만들면 됩니다 — 앱·봇 토큰은 워크숍 중에 같이 만들어요.</span></div>
+            <a class="link" href="https://slack.com/get-started" target="_blank" rel="noopener">↗ slack.com — 워크스페이스 만들기</a>
+            <ol><li>새 워크스페이스 생성(이메일 인증)</li><li>테스트용 채널 하나(예: <code>#dev</code>) 만들기</li></ol>
           </div>
-          <div class="term">
-            <div class="term__bar"><span class="dots"><i></i><i></i><i></i></span><span class="term__name">Git Bash / WSL — 훅 등록 · 실행</span><button class="copy">복사</button></div>
-            <div class="term__body"><span class="line"><span class="p">$ </span><span class="cmd">echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.bashrc</span></span><span class="line"><span class="p">$ </span><span class="cmd">source ~/.bashrc</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init claude</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent init codex</span></span><span class="line"><span class="p">$ </span><span class="cmd">lazyagent</span></span></div>
-          </div>
-          <div class="ok"><code>lazyagent</code> 실행 후 <b>패널 3 (Agents/subagents)</b> 에서 서브에이전트 트리를 볼 수 있어요.</div>
+          <div class="ok">워크스페이스 + 채널까지만. 앱 생성·봇 토큰·슬래시 명령은 워크숍에서 함께.</div>
         </div>
       </div>
-    </div></div>
+      <div class="step">
+        <div class="step__n">9</div>
+        <div>
+          <h3 class="step__title">v0 <span class="tag">웹</span> <span class="tag">가입만</span></h3>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">▦</span><span class="dl__t">Vercel의 디자인·배포 도구예요. <b>가입만</b> 해두면 됩니다 — v0 계정이 곧 Vercel 계정이에요.</span></div>
+            <a class="link" href="https://v0.app" target="_blank" rel="noopener">↗ v0.app — Sign up</a>
+            <ol><li>GitHub로 로그인(권장) → GitHub 연결 허용</li><li>나중에 만든 레포를 v0로 Import → 디자인하고 Vercel로 배포</li></ol>
+          </div>
+          <div class="ok">로그인 + GitHub 연결까지만 해두세요.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__n">10</div>
+        <div>
+          <h3 class="step__title">Neon <span class="tag">웹</span> <span class="tag">DB 생성</span></h3>
+          <div class="dl">
+            <div class="dl__head"><span class="dl__ico">◇</span><span class="dl__t">배포 때 쓸 <b>호스팅 Postgres</b>예요(무료 티어). SQLite는 서버리스에서 안 떠서 필요해요.</span></div>
+            <a class="link" href="https://neon.tech" target="_blank" rel="noopener">↗ neon.tech — Sign up</a>
+            <ol><li>GitHub/Google로 가입 → New Project 생성(region 선택)</li><li>Connection string(<code>postgresql://…</code>) 복사 → 배포 때 <code>DATABASE_URL</code>로</li></ol>
+          </div>
+          <div class="ok">연결 문자열만 메모해 두면 됩니다.</div>
+        </div>
+      </div>
+    </div>
+    </div>
       </section>
       <section class="phase" id="phase-during">
         <div class="note">⚠️ <b>준비물</b> — Anthropic <b>API 키</b>(제공됨) · Codex용 <b>ChatGPT 유료 플랜</b>(Plus 이상). 먼저 <b>1부</b>를 끝냈는지 확인하세요.</div>
